@@ -1,0 +1,24 @@
+video::-webkit-media-controls-enclosure, audio::-webkit-media-controls-enclosure {
+    height: 48px;
+  }
+
+video::-webkit-media-controls-panel, audio::-webkit-media-controls-panel {
+    height: 48px;
+}
+
+video::-webkit-media-controls-play-button, audio::-webkit-media-controls-play-button {
+    margin: 0 8px;
+}
+
+video::-webkit-media-controls-fullscreen-button, audio::-webkit-media-controls-volume-slider {
+    margin-right: 20px;
+}
+
+video::-webkit-media-controls-timeline, audio::-webkit-media-controls-timeline {
+    margin: 0px 20px;
+}
+
+video::-webkit-media-controls-current-time-display, video::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display {
+    font-weight: 500;
+}

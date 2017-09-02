@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext');
+@import url("https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css");
+* {
+    will-change: auto;
+    outline: none;
+    
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.mdi {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    width: 100%;
+    height: 100vh;
+    background: #000;
+}
+
+h1, h2, h3, h4, h5, h6, span, input, p, a, strong, small, i, u {
+    font-family: inherit;
+    color: #212121;
+}
+
+.titlebar {
+    width: 100%;
+    height: 32px;
+    position: fixed;
+    background: #FFF;
+    top: 0;
+    left: 0;
+    display: flex;
+    user-select: none;
+
+    section {
+        width: inherit;
+        height: inherit;
+        margin: auto;
+        display: flex;
+        top: 0;
+
+        span {
+            margin: auto 10px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        button {
+            -webkit-appearance: none;
+            border: 0;
+            background: transparent;
+            padding: 6px 10px;
+            -webkit-app-region: nodrag;
+            font-weight: 700;
+            z-index: 9999;
+            transition: all .3s ease;
+            .mdi {
+                text-rendering: geometricPrecision;
+                margin: auto;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+            &:active {
+                background: rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    section.left {
+        left: 0;
+        flex-basis: 92px;
+    }
+    section.center {
+        left: 0;
+        right: 0;
+        flex-grow: 1;
+        -webkit-app-region: drag;
+        display: flex;
+
+        span {
+            text-align: center;
+            flex: 1;
+        }
+    }
+    section.right {
+        right: 0;
+        flex-basis: 92px;
+        justify-content: flex-end;
+        align-content: flex-end;
+    }
+}
+
+.container {
+    height: calc(100vh - 32px);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #000;
+
+    #url-modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        padding: 24px;
+        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0.3);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+        z-index: 9999;
+        form {
+            margin: auto;
+
+            input {
+                padding: 5px;
+                color: #212121;
+                -webkit-appearance: none;
+                border: none;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+                border-radius: 2px;
+                width: 500px;
+            }
+        }
+    }
+}
+
+.yu {
+    position: relative;
+    transition: all .5s ease;
+    height: inherit;
+    width: inherit;
+    &.full {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  
+  .yu-container {
+    position: relative;
+    z-index: 1;
+    background: black;
+    height: inherit;
+    width: inherit;
+  }
+  
+  .yu.full > .yu-container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .yu-renderer {
+    background: black;
+  }
+  
+  #playindi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: all .5s ease;
+    opacity: 1;
+    > {
+      .mdi {
+        background-color: rgba(255,255,255, 1);
+        border-radius: 50%;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+        padding: 16px;
+        color: #212121;
+        font-size: 32px !important;
+      }
+      .spinner {
+        margin: 16px;
+        border: initial;
+      }
+    }
+  }
+  
+  .yu-toolbar {
+    width: 100%;
+    height: 64px;
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+    display: flex;
+    flex-flow: column wrap;
+    transition: all .5s ease;
+    section {
+      display: flex;
+      flex-flow: row wrap;
+      height: 48px;
+      width: inherit;
+      position: absolute;
+      bottom: 0;
+      &.seeker {
+        position: relative;
+        height: 8px;
+        bottom: -12px;
+        > {
+          progress {
+            width: 100%;
+            -webkit-appearance: none;
+            border: none;
+            background: transparent;
+            color: transparent;
+            margin: -10px auto;
+            height: 3px;
+            &::-webkit-progress-bar {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+            &::-webkit-progress-value {
+              background-color: #FFF;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.17);
+              z-index: 5;
+            }
+            &.buffering {
+              &::-webkit-progress-bar {
+                background-color: transparent;
+              }
+              &::-webkit-progress-value {
+                background-color: rgba(255, 255, 255, 0.3);
+                box-shadow: none;
+                z-index: 4;
+              }
+            }
+          }
+          input {
+            width: inherit;
+            margin: auto;
+            background: transparent;
+            -webkit-appearance: none;
+            border: none;
+            &:focus {
+              outline: none;
+            }
+            &::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              opacity: 0;
+              height: 8px;
+              width: 8px;
+              border-radius: 50%;
+              background: #FFF;
+              cursor: pointer;
+              margin: 0;
+              transition: all .3s ease;
+              padding: 0;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+              &:active, &:hover {
+                -webkit-appearance: none;
+                background: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .yu-button {
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin: 1px;
+    flex-basis: 48px;
+    background: transparent;
+    transition: all .5s ease;
+    > .mdi {
+        transition: all .5s ease;
+      color: rgba(255, 255, 255, 0.6);
+      margin: auto;
+    }
+    &:hover > .mdi, &:active > .mdi {
+      color: rgba(255, 255, 255, 1);
+    }
+    &:hover, &:active {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+  
+  .yu-time {
+    margin: auto;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0 8px;
+    font-size: 0.9em;
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .owo {
+    .desu {
+        background-image: url('https://image.freepik.com/free-icon/chrome-logo_318-40217.jpg') !important;
+        background-position: center;
+        background-size: contain;
+        height: 64px;
+        width: 64px;
+        margin: 16px !important;
+        padding: 24px;
+    }
+  }

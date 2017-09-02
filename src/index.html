@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel='stylesheet' href='./styles.scss' />
+  <link rel='stylesheet' href='./chromeplayer.css' />
+</head>
+<body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 0" >
+  <div id="App"></div>
+</body>
+
+<script type="application/javascript">
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {AppContainer} from 'react-hot-loader';
+
+window.addEventListener("dragover",function(e){
+  e = e || event;
+  e.preventDefault();
+},false);
+window.addEventListener("drop",function(e){
+  e = e || event;
+  e.preventDefault();
+},false);
+
+const render = () => {
+  const App = require('./app').default;
+  ReactDOM.render(<AppContainer><App /></AppContainer>, document.getElementById('App'));
+}
+
+render();
+if (module.hot) {
+  module.hot.accept(render);
+}
+</script>
+</html>

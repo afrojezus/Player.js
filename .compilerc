@@ -1,0 +1,28 @@
+{
+  "env": {
+    "development": {
+      "application/javascript": {
+        "presets": [
+          ["env", { "targets": { "electron": "1.6.0" } }],
+          "react",
+          "es2015",
+          "stage-0"
+        ],
+        "plugins": ["transform-runtime", "transform-class-properties", "transform-async-to-generator", "transform-es2015-classes", "react-hot-loader/babel"],
+        "sourceMaps": "inline"
+      }
+    },
+    "production": {
+      "application/javascript": {
+        "presets": [
+          ["env", { "targets": { "electron": "1.6.0" } }],
+          "react",
+          "es2015",
+          "stage-0"
+        ],
+        "plugins": ["transform-class-properties", "transform-async-to-generator", "transform-es2015-classes"],
+        "sourceMaps": "none"
+      }
+    }
+  }
+}
